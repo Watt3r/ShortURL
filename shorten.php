@@ -54,7 +54,7 @@ if (!$con)
   die('Could not connect: ' . mysql_error()); // Basic test connection
   };
 $urlinput=mysqli_real_escape_string($con, $unv);
-$id=rand(10000,99999); // generates random number for url
+$id=rand(1000000,9999999); // generates random number for url
 
 $shorturl=base_convert($id,20,36);
 $sql = "INSERT INTO shortr (id,url,shortened)
