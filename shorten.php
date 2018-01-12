@@ -21,21 +21,43 @@ text-align:center;
 	position: absolute;
 }
 footer {
-	width: 100%;
-	text-align: justify;
-	top:80%;
-	position: absolute;
-	text-align: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #00843D;
+  text-align: center;
 }
 .content {
-	position: absolute;
-	width: 500px;
-	top: 40%;
-	left: 32%;
-	font-size: 28px;
+
+	width: 50%;
+	margin: auto;
+	margin-top: 25%;
 	
 }
+html{
+	background: url("bg.jpg") no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+a{
+	font-weight: bold;
+	color: black;
+}
+a:visited {
+    color: #393a3a;
+}
 
+a:hover {
+   color: #586857;
+}
+
+a:active {
+    color: #a6a8a3;
+}
 -->
 </style>
 </head>
@@ -46,7 +68,18 @@ footer {
 <div class="content">
 
 <?php
-$unv = $_POST['url'];
+$rawLink = $_POST['url'];
+echo $rawLink;
+echo $unv;
+if (strpos($rawLink, 'http://') !== false) {
+    $unv = $rawLink;
+} else if (strpos($rawLink, 'https://') !== false) {
+    $unv = $rawLink;
+} else {
+	$unv = "http://". $rawLink;
+}
+echo $rawLink;
+echo $unv;
 
 $con = mysqli_connect("localhost","root","", "short"); // Add password and correct mySQL DB name
 if (!$con)
@@ -73,6 +106,6 @@ mysqli_close($con); // Closes mysql connection
 
 
 </div>
-<footer><P>made by <a href="https://watterikson.com">Watt Erikson</a></P></footer>
+<footer><P>Made by <a href="https://watterikson.com">Watt Erikson</a></P></footer>
 </body>
 </html>

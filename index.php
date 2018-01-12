@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>PHP url shortener</title>
+<title>PHP Url Shortener</title>
 <style type="text/css">
 <!--
 #form1 p {
@@ -17,31 +17,54 @@ text-align:center;
 	position: absolute;
 }
 footer {
-	width: 100%;
-	text-align: justify;
-	top:80%;
-	position: absolute;
-	text-align: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #00843D;
+  text-align: center;
 }
 .content {
-	position: absolute;
-	width: 500px;
-	top: 25%;
-	left: 30%;
+
+	width: 50%;
+	margin: auto;
+	margin-top: 25%;
 	
 }
+html{
+	background: url("bg.jpg") no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+a{
+	font-weight: bold;
+	color: black;
+}
+a:visited {
+    color: #393a3a;
+}
 
+a:hover {
+   color: #586857;
+}
+
+a:active {
+    color: #a6a8a3;
+}
 -->
 </style>
 </head>
 
 <body>
 
-<div class="header"> Php URL shortener<hr /></div>
+<div class="header">Php URL shortener</div>
 <div class="content">
 <form id="form1" name="form1" method="post" action="shorten.php">
   
-  <p><strong> Url:</strong>
+  <p><strong>Url:</strong>
     <input type="text" name="url" id="url"  size="45"  />
   </p>
   <p>
@@ -51,6 +74,6 @@ footer {
 </form>
 
 </div>
-<footer><P>made by <a href="https://watterikson.com">Watt Erikson</a></P></footer>
+<footer><P>Made by <a href="https://watterikson.com">Watt Erikson</a></P></footer>
 </body>
 </html>
