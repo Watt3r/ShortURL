@@ -65,10 +65,10 @@ a:active {
 <form id="form1" name="form1" method="post" action="shorten.php">
   
   <p><strong>Url:</strong>
-    <input type="text" name="url" id="url"  size="45"  />
+    <input type="text" name="url" id="url"  size="45" placeholder="https://turtlecoin.lol" />
   </p>
   <p>
-    <input type="submit" name="Submit" id="Submit" value="Shorten" />
+    <input type="submit" name="Submit" id="Submit" value="Shorten"  />
   </p>
   <p>&nbsp;</p>
 </form>
