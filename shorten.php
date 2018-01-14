@@ -34,6 +34,8 @@ footer {
 	width: 50%;
 	margin: auto;
 	margin-top: 25%;
+  background-color: black;
+  color: white;
 	
 }
 html{
@@ -45,18 +47,18 @@ html{
 }
 a{
 	font-weight: bold;
-	color: black;
+  color: #ffff00;
 }
 a:visited {
-    color: #393a3a;
+    color: #898900;
 }
 
 a:hover {
-   color: #586857;
+   color: #e5e500;
 }
 
 a:active {
-    color: #a6a8a3;
+    color: #b7b700;
 }
 -->
 </style>
@@ -69,8 +71,6 @@ a:active {
 
 <?php
 $rawLink = $_POST['url'];
-echo $rawLink;
-echo $unv;
 if (strpos($rawLink, 'http://') !== false) {
     $unv = $rawLink;
 } else if (strpos($rawLink, 'https://') !== false) {
@@ -78,8 +78,6 @@ if (strpos($rawLink, 'http://') !== false) {
 } else {
 	$unv = "http://". $rawLink;
 }
-echo $rawLink;
-echo $unv;
 
 $con = mysqli_connect("localhost","root","", "short"); // Add password and correct mySQL DB name
 if (!$con)
@@ -94,7 +92,7 @@ $sql = "INSERT INTO shortr (id,url,shortened)
 VALUES ('$id','$urlinput','$shorturl')"; // Replace with MySQL Table name
 
 mysqli_query($con,$sql); 
-echo "Shortened url is <a href=\"http://short.turtle-coin.com/". $shorturl ."\">http://short.turtle-coin.com/". $shorturl ."</a>"; // echo shorter url
+echo "Shortened url is <a href=\"http://trtl.fun/". $shorturl ."\">http://trtl.fun/". $shorturl ."</a>"; // echo shorter url
 
 mysqli_close($con); // Closes mysql connection
 

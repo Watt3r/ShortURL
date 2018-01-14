@@ -8,7 +8,7 @@ Small PHP script for URL shortening, built for https://TRTL.fun
 
 
 MySQL table setup:
-`CREATE TABLE shortr ( id smallint unsigned not null, url varchar(32) not null, shortened varchar(10));`
+`CREATE TABLE shortr ( id smallint unsigned not null, url varchar(128) not null, shortened varchar(10));`
 ID field is a random 5 digit number
 
 Url field contains the lengthy URL address
